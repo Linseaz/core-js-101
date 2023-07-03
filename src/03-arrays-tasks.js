@@ -33,9 +33,10 @@ const findElement = (arr, value) => arr.indexOf(value);
  *    2 => [ 1, 3 ]
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
-function generateOdds(/* len */) {
-  throw new Error('Not implemented');
-}
+const generateOdds = (length) => Array.from({ length }).reduce((acc, _, i) => {
+  acc.push(i * 2 + 1);
+  return acc;
+}, []);
 
 
 /**
